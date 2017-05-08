@@ -56,6 +56,16 @@ Animated.spring(this.position, {
 ### Animated Component Lifecycle and Hierarchy
 ![alt text](demo/animatedComponentLifeCycle.png "Hierarchy and Lifecycle")
 
+### Swipe Deck Feature
+![alt text](demo/swipeDeck.png "swipe deck")
 
+Prop  | Type  | Purpose
+----- | ----- | -------
+`renderCard`  |  function  |  Returns JSX to show inside of a card
+`renderNoMoreCards`  |  function  |  Returns JSX when no more cards exist
+`data`  |  array of objects  |  List of records to use for cards
+`onSwpieRight` or `onSwipeLeft`  |  function  |  Called when user swipes left or right on an item
+
+![alt text](demo/swipeDeckProps.png "swipe deck props")
 
 https://www.udemy.com/react-native-advanced/learn/v4/t/lecture/6845196?start=0
