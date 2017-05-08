@@ -80,5 +80,20 @@ npm install react-native-elements
 3) how is the gesture changing?
 
 
+### Testing
+Using debugger in `Deck.js`
+```js
+const panResponder = PanResponder.create({
+  onStartShouldSetPanResponder: () => true,
+  onPanResponderMove: (event, gesture) => {
+    debugger;
+    console.log('gesture ', gesture);
+  },
+  onPanResponderRelease: () => {}
+});
+```
+The code above makes use of `debugger`. The program will stop at the breakpoint where `debugger` is written.
+![alt text](demo/debugger.png "debugger")
+
 Special thanks to Stephen Grider
 https://www.udemy.com/react-native-advanced/learn/v4/t/lecture/6845196?start=0
