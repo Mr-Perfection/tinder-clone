@@ -72,4 +72,13 @@ Download it at [link](https://github.com/react-native-training/react-native-elem
 npm install react-native-elements
 ```
 
+### Pan Responder (aka Gesture System)
+![alt text](demo/panResponderSystem.png "Pan Responder System")
+
+1) what are we touching?
+2) what component handles touch?
+3) how is the gesture changing?
+
+
+Special thanks to Stephen Grider
 https://www.udemy.com/react-native-advanced/learn/v4/t/lecture/6845196?start=0
