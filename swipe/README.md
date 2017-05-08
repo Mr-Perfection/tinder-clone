@@ -1,7 +1,3 @@
-# tinder-clone
-Swipe cards like Tinder!
-In this project, I will be demonstrating my understanding with animations in react-native.
-
 # Not yet defined
 React Native Application
 
@@ -52,9 +48,6 @@ Animated.spring(this.position, {
   <View style={styles.ball} />
 </Animated.View>
 ```
-
-### Animated Component Lifecycle and Hierarchy
-![alt text](demo/animatedComponentLifeCycle.png "Hierarchy and Lifecycle")
 
 
 
