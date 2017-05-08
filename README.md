@@ -1,9 +1,7 @@
 # tinder-clone
 Swipe cards like Tinder!
-In this project, I will be demonstrating my understanding with animations in react-native.
+In this React Native application, I will be demonstrating my understanding with animations in react-native.
 
-# Not yet defined
-React Native Application
 
 ### Setup
 ```
@@ -67,5 +65,11 @@ Prop  | Type  | Purpose
 `onSwpieRight` or `onSwipeLeft`  |  function  |  Called when user swipes left or right on an item
 
 ![alt text](demo/swipeDeckProps.png "swipe deck props")
+
+### React Native Elements
+Download it at [link](https://github.com/react-native-training/react-native-elements)
+```bash
+npm install react-native-elements
+```
 
 https://www.udemy.com/react-native-advanced/learn/v4/t/lecture/6845196?start=0
