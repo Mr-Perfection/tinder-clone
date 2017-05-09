@@ -35,7 +35,7 @@ Animated:
 ```js
 import { Animated } from 'react-native';
 
-Animated.Value.Animated // What's the current position of the element being animated?
+Animated.Value // What's the current position of the element being animated?
 Animated.Types.Spring // how is the animation changing?
 Animated.Components.View // Apply the animation's current position to an actual Component
 
@@ -50,6 +50,8 @@ Animated.spring(this.position, {
   <View style={styles.ball} />
 </Animated.View>
 ```
+**[AnimatedValueXY](http://facebook.github.io/react-native/releases/0.44/docs/animated.html#animatedvaluexy)** to handle pan gestures.
+  
 
 ### Animated Component Lifecycle and Hierarchy
 ![alt text](demo/animatedComponentLifeCycle.png "Hierarchy and Lifecycle")
@@ -78,6 +80,7 @@ npm install react-native-elements
 1) what are we touching?
 2) what component handles touch?
 3) how is the gesture changing?
+
 
 
 ### Testing
