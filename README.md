@@ -135,7 +135,7 @@ resetPosition() {
 
 ```
 **The completed swiping version looks like this (click the image):**
-![Watch the video](demo/swipeVideo.mov)
+[![Watch the video](demo/swipeVideo.mov)
 
 
 ### Testing
