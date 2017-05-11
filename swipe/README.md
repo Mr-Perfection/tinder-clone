@@ -67,6 +67,23 @@ getCardStyle() {
   };
 }
 //...
+
+// The problem with the code above is depending on the screen size,
+//inputRange may create too much or too small rotation with the given values.
+const SCREEN_WIDTH = Dimensions.get('window').width;
+
+getCardStyle() {
+  const { position } = this.state;
+  const rotate = position.x.interpolate({
+    inputRange: [-SCREEN_WIDTH * 2.0, 0, SCREEN_WIDTH * 2.0],
+    outputRange: ['-120deg', '0deg', '120deg']
+  });
+  return {
+    ...this.state.position.getLayout(),
+    transform: [{ rotate }]
+  };
+}
+
 ```
 
 

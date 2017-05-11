@@ -84,6 +84,59 @@ Prop  | Type  | Purpose
 
 ![alt text](demo/swipeDeckProps.png "swipe deck props")
 
+### Rotation as User Swipes
+
+* `inputRange` sets how much pixels your finger would move the card. (left, default, right)
+* `outputRange` sets how much degree your card would rotate based on your input or finger movement within `inputRange`.
+```js
+//...
+getCardStyle() {
+  const { position } = this.state;
+  const rotate = position.x.interpolate({
+    inputRange: [-500, 0, 500],
+    outputRange: ['-120deg', '0deg', '120deg']
+  });
+  return {
+    ...this.state.position.getLayout(),
+    transform: [{ rotate }]
+  };
+}
+//...
+
+// The problem with the code above is depending on the screen size,
+// inputRange may create too much or too small rotation with the given values.
+// Set inputRange to be dependent on SCREEN_WIDTH
+const SCREEN_WIDTH = Dimensions.get('window').width;
+
+getCardStyle() {
+  const { position } = this.state;
+  const rotate = position.x.interpolate({
+    inputRange: [-SCREEN_WIDTH * 2.0, 0, SCREEN_WIDTH * 2.0],
+    outputRange: ['-120deg', '0deg', '120deg']
+  });
+  return {
+    ...this.state.position.getLayout(),
+    transform: [{ rotate }]
+  };
+}
+
+// To bring back the card to the original position when swipe is incomplete (Deck.js)
+//...
+onPanResponderRelease: () => {
+  this.resetPosition();
+}
+//...
+resetPosition() {
+  Animated.spring(this.state.position, {
+    toValue: { x: 0, y: 0 }
+  }).start();
+}
+//...
+
+```
+**The completed swiping version looks like this (click the image):**
+![Watch the video](demo/swipeVideo.mov)
+
 
 ### Testing
 Using debugger in `Deck.js`
@@ -99,6 +152,7 @@ const panResponder = PanResponder.create({
 ```
 The code above makes use of `debugger`. The program will stop at the breakpoint where `debugger` is written.
 ![alt text](demo/debugger.png "debugger")
+
 
 Special thanks to Stephen Grider
 https://www.udemy.com/react-native-advanced/learn/v4/t/lecture/6845196?start=0
