@@ -49,6 +49,26 @@ Animated.spring(this.position, {
 </Animated.View>
 ```
 
+### Rotation as User Swipes
+
+* `inputRange` sets how much pixels your finger would move the card. (left, default, right)
+* `outputRange` sets how much degree your card would rotate based on your input or finger movement within `inputRange`.
+```js
+//...
+getCardStyle() {
+  const { position } = this.state;
+  const rotate = position.x.interpolate({
+    inputRange: [-500, 0, 500],
+    outputRange: ['-120deg', '0deg', '120deg']
+  });
+  return {
+    ...this.state.position.getLayout(),
+    transform: [{ rotate }]
+  };
+}
+//...
+```
+
 
 
 https://www.udemy.com/react-native-advanced/learn/v4/t/lecture/6845196?start=0

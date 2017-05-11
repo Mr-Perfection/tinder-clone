@@ -1,6 +1,6 @@
 # tinder-clone
 Swipe cards like Tinder!
-In this React Native application, I will be demonstrating my understanding with animations in react-native.
+In this React Native application, I will be demonstrating my understanding with animations & gesture system (panResponder) in react-native.
 
 
 ### Setup
@@ -24,13 +24,16 @@ Easy on device testing
 Common extra components
 ```
 ### Animations system in React Native
-Layout Animation:
+
+**Layout Animation:**
 * easy to Setup
 * not much control
 
-Animated:
+**Animated:**
 * more complicated setup
 * handle gesture animations
+
+**[AnimatedValueXY](http://facebook.github.io/react-native/releases/0.44/docs/animated.html#animatedvaluexy)** to handle pan gestures.
 
 ```js
 import { Animated } from 'react-native';
@@ -50,23 +53,6 @@ Animated.spring(this.position, {
   <View style={styles.ball} />
 </Animated.View>
 ```
-**[AnimatedValueXY](http://facebook.github.io/react-native/releases/0.44/docs/animated.html#animatedvaluexy)** to handle pan gestures.
-  
-
-### Animated Component Lifecycle and Hierarchy
-![alt text](demo/animatedComponentLifeCycle.png "Hierarchy and Lifecycle")
-
-### Swipe Deck Feature
-![alt text](demo/swipeDeck.png "swipe deck")
-
-Prop  | Type  | Purpose
------ | ----- | -------
-`renderCard`  |  function  |  Returns JSX to show inside of a card
-`renderNoMoreCards`  |  function  |  Returns JSX when no more cards exist
-`data`  |  array of objects  |  List of records to use for cards
-`onSwpieRight` or `onSwipeLeft`  |  function  |  Called when user swipes left or right on an item
-
-![alt text](demo/swipeDeckProps.png "swipe deck props")
 
 ### React Native Elements
 Download it at [link](https://github.com/react-native-training/react-native-elements)
@@ -81,6 +67,22 @@ npm install react-native-elements
 2) what component handles touch?
 3) how is the gesture changing?
 
+
+### Animated Component Lifecycle and Hierarchy
+![alt text](demo/animatedComponentLifeCycle.png "Hierarchy and Lifecycle")
+
+
+### Swipe Deck Feature
+![alt text](demo/swipeDeck.png "swipe deck")
+
+Prop  | Type  | Purpose
+----- | ----- | -------
+`renderCard`  |  function  |  Returns JSX to show inside of a card
+`renderNoMoreCards`  |  function  |  Returns JSX when no more cards exist
+`data`  |  array of objects  |  List of records to use for cards
+`onSwpieRight` or `onSwipeLeft`  |  function  |  Called when user swipes left or right on an item
+
+![alt text](demo/swipeDeckProps.png "swipe deck props")
 
 
 ### Testing
