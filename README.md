@@ -84,7 +84,7 @@ Prop  | Type  | Purpose
 
 ![alt text](demo/swipeDeckProps.png "swipe deck props")
 
-### Rotation as User Swipes
+### Rotation as User swipes
 
 * `inputRange` sets how much pixels your finger would move the card. (left, default, right)
 * `outputRange` sets how much degree your card would rotate based on your input or finger movement within `inputRange`.
@@ -137,6 +137,12 @@ resetPosition() {
 **The completed swiping version looks like this (click the image):**
 ![Watch the video](demo/swipeVideo.mov)
 
+
+### Using Callbacks after Animation
+```js
+//https://facebook.github.io/react-native/docs/animated.html#working-with-animations
+
+```
 
 ### Testing
 Using debugger in `Deck.js`
