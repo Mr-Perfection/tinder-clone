@@ -165,6 +165,9 @@ const styles = {
 };
 ```
 
+### One Time Password
+[Click here](one-time-password/README.md)
+
 ### Testing
 Using debugger in `Deck.js`
 ```js
