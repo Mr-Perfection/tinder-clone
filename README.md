@@ -139,9 +139,30 @@ resetPosition() {
 
 
 ### Using Callbacks after Animation
-```js
-//https://facebook.github.io/react-native/docs/animated.html#working-with-animations
+https://facebook.github.io/react-native/docs/animated.html#working-with-animations
 
+### Deck of cards
+1. Create a deck of cards that stack all together. `ge`
+```js
+// check renderCards() in Deck.js
+getCardStyle() {
+  const { position } = this.state;
+  const rotate = position.x.interpolate({
+    inputRange: [-SCREEN_WIDTH * 2.0, 0, SCREEN_WIDTH * 2.0],
+    outputRange: ['-120deg', '0deg', '120deg']
+  });
+  return {
+    ...this.state.position.getLayout(),
+    transform: [{ rotate }]
+  };
+}
+
+const styles = {
+  cardStyle: {
+    position: 'absolute',
+    width: SCREEN_WIDTH
+  }
+};
 ```
 
 ### Testing
